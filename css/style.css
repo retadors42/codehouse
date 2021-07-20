@@ -5,142 +5,269 @@
 }
 
 body{
+    width: 90%;
+    max-width: 80vw;
+    margin: 2.60vw auto;
     color: #ecdbba;
     background-color: #161616;
-       
     font-family: 'Poppins', sans-serif;
-   
-}
-
-header{
-    margin:25px ;
-    padding: 25px;
-    background-color: #c84b31 ;
-    color: #ecdbba;
-    border-radius: 10px;
-    text-align: center;
-
+    display: grid;
+    gap: 1.04vw;
+    justify-content:; 
+    grid-template-areas:
+    "logo logo logo logo"
+    "header header header header"
+    "parrafo parrafo parrafo parrafo"
+    "servicios1 servicios1 servicios1 servicios1"
+    "contactoCliente contactoCliente contactoCliente contactoCliente"
+    "footer footer footer footer";
 
 }
 .fotoLogo{
     display: block;
     margin-left: auto;
     margin-right: auto; 
-    padding: 1rem;  
-}
-ul{
-    list-style: none;
-
-}
-li{
-    display: inline-block;
-    width: 30%;
-    position: relative;
-    
-}
-ul li a:hover{
-    background-color: #161616;
-    color: #c84b31;
-    padding: 5px;
-}
-a{
-    text-decoration: none;
-    padding: 5px;
+    padding: 2.60vw;  
+    grid-area: logo;
+    max-width: 60vw;
 }
 
-.menu{
-    background-color: #c84b31;
-    color: #161616;
-}
-
-.subtitulos {
-    color: #161616;
-    font-size: 2.5em;
-}
-.subtitulos2{
-
-    color: #c84b31;
-    font-size: 1.5em;
-
-}
-
-.FondoFotos{
-    background-color:#201eb6;
-    text-align: right;
-    margin: 20px;
-    margin-bottom: 10px;   
-}
-  
-h2{
-    color: #c84b31;
-    font-size: 2em;
-    
-    
-
-}
-p{
-
-}
-.formulario1{
-
-}
-.parrafo2{
-    margin:25px ;
-    padding: 25px;
-    color: #ecdbba;
-    border-radius: 10px;
-    border-color:#c84b31 ;
-    border-style: solid;
-  
-    
-    
-    
-}
-.viñetas {
-    color:#e7dfdd;
-}
-
-footer{
-    margin:25px ;
-    padding: 80px;
+header{
+    grid-area: header;
+    margin-bottom: 1.04vw;
+    padding: 2.60vw;
     background-color: #c84b31 ;
     color: #161616;
-    border-radius: 10px;
-    text-align: center;
+    border-radius: 1.04vw;
+}
+.menu{
+    background-color: #c84b31;
+    border-radius: 1.04vw;
+    border-style: none;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #161616;   
+    font-weight: bold;
+}
+.categoria{
+    color: #161616;
+    font-size: 3.13vw;
+    text-decoration: none;
+}
+.categoria:hover{
+    width: 7.30vw;
+    height: 3.13vw;
+    color: #c84b31;
+    transition: all 2s ease;
+}
+.inicio:hover{
+    width: 8.30vw;
+    height: 3.13vw;
+    color: #c84b31;
+    background-color: #161616;
+    transition: all 2s ease;
+}
+.servicios:hover{
+    width: 14.00vw;
+    height: 3.13vw;
+    color: #c84b31;
+    background-color: #161616;
+    transition: all 2s ease;
+}
+.contacto:hover{
+    width: 13.70vw;
+    height: 3.13vw;
+    color: #c84b31;
+    background-color: #161616;
+    transition: all 2s ease;
+}
+
+.parrafo{
+    padding: 1.67vw;
+    border-radius: 1.04vw;
+    border-color: #c84b31;
+    border-style: solid;
+    grid-area: parrafo;
+    display: grid;
+    grid-template-areas:
+    "fotoInicio par par par";
     
 }
+h2{
+    color: #c84b31;
+    font-size: 3.13vw;
+    text-align: center;
+}
+p{
+    text-align: justify;
+    padding: 1.67vw;
+}
+.par{
+    grid-area: par;
+}
+.fondoFotos{
+    max-width: 33.31vw;
+}
+.fotoInicio{
+    grid-area: fotoInicio;
+    align-self: center;
+    justify-self: center;
+    transition: all 3s ease;
+}
+.fotoInicio:hover{
+    transform: scale(1.2, 1.2);
+}
+
+
+
 .servicios1{
-    margin:25px ;
-    padding: 25px;
-    color: #ecdbba;
-    border-radius: 10px;
+    padding: 2.60vw;
+    margin-bottom: 1.04vw;
+    border-radius: 1.04vw;
     border-color:#c84b31 ;
     border-style: solid;
     text-align: center;
-    margin-bottom: 50px;
+    grid-area: servicios1;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr,1fr);  
+    grid-template-columns: repeat(1, 1pr); 
+    grid-template-areas:
+    "servicios3" 
+    "fotoInicio"
+    "descripcionempresa"
+    "listadeprecios";
 }
-.contactoCliente{
-    margin:25px ;
-    padding: 25px;
-    color: #ecdbba;
-    border-radius: 10px;
-    border-color:#c84b31 ;
-    border-style: solid; 
+#servicios3{
+    grid-area: servicios3;
+}
+#descripcionEmpresa{
+    grid-area: descripcionempresa;
 }
 .listaDePrecios{
-    text-align: center;
-    margin:25px ;
-    padding: 25px;
-    color: #ecdbba;
-    border-radius: 10px;
+    grid-area: listadeprecios;
+}
+
+
+
+
+
+.contactoCliente{
+    padding: 2.60vw;
+    margin-bottom: 1.04vw;
+    border-radius: 1.04vw;
     border-color:#c84b31 ;
-    border-style: solid; 
+    border-style: solid;
+    text-align: center;
+    
+    grid-area: contactoCliente;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr,1fr);  
+    grid-template-columns: repeat(1, 1pr); 
+    grid-template-areas:
+    "dejaucontacto" 
+    "formulario1";
+}
+.dejaTucontacto{
+    grid-area: dejatucontacto;
+}
+.formulario1{
+    grid-area: formulario1;
+}
+
+
+
+
+
+footer{
+    padding: 1rem;
+    border-radius: 1.04vw;
+    border-color: #c84b31;
+    border-style: solid;
+    grid-area: footer;
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+    "direccion empty redesSociales redesSociales";
+
 }
 .direccion{
-    float: left;
-
-
+    grid-area: direccion;
+}
+.redesSociales{
+    align-self: center;
+    justify-self: end;
+    grid-area: redesSociales;
 }
 .redes{
-    float: right;
+    max-width: 7.43vw;
+    transition: all 2s ease
 }
+.redes:hover{
+    transform: rotate(360deg)
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px){
+    body{ display: grid;
+        gap: 1.04vw;
+        justify-content: center; 
+        grid-template-areas:
+        "logo"
+        "header"
+        "parrafo"
+        "servicios1"
+        "contactoCliente"
+        "footer";
+    }
+    .categoria{
+        font-size: 5.13vw; 
+    }
+
+
+@media screen and (max-width: 768px){
+    .parrafo{
+        grid-area: parrafo;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr,1fr);  
+        grid-template-columns: repeat(1, 1pr); 
+        grid-template-areas:
+        "fotoInicio" 
+        "par";
+    }
+    h2{
+        color: #c84b31;
+        font-size: 5.13vw;
+        text-align: center;
+        margin-bottom: 3.13vw;
+    }
+}
+
+@media screen and (max-width: 768px){
+    footer{
+        grid-area: footer;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+        "direccion"
+        "redesSociales";    
+    }
+    .redesSociales{
+        justify-self: center;
+    }
+    .redes{
+        max-width: 13.43vw;
+        transition: all 2s ease
+    }
+    .redes:hover{
+        transform: rotate(360deg)
+    }
+}
+
