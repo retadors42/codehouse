@@ -1,273 +1,344 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+header {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: header;
+  padding: 2.60vw;
+  background-color: #c84b31;
+  border-radius: 1.04vw;
 }
 
-body{
-    width: 90%;
-    max-width: 80vw;
-    margin: 2.60vw auto;
-    color: #ecdbba;
-    background-color: #161616;
-    font-family: 'Poppins', sans-serif;
-    display: grid;
-    gap: 1.04vw;
-    justify-content:; 
-    grid-template-areas:
-    "logo logo logo logo"
-    "header header header header"
-    "parrafo parrafo parrafo parrafo"
-    "servicios1 servicios1 servicios1 servicios1"
-    "contactoCliente contactoCliente contactoCliente contactoCliente"
-    "footer footer footer footer";
-
-}
-.fotoLogo{
-    display: block;
-    margin-left: auto;
-    margin-right: auto; 
-    padding: 2.60vw;  
-    grid-area: logo;
-    max-width: 60vw;
+.menu {
+  background-color: #c84b31;
+  border-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-weight: bold;
 }
 
-header{
-    grid-area: header;
-    margin-bottom: 1.04vw;
-    padding: 2.60vw;
-    background-color: #c84b31 ;
-    color: #161616;
-    border-radius: 1.04vw;
+.categoria {
+  color: #161616;
+  font-size: 3.13vw;
+  text-decoration: none;
 }
-.menu{
-    background-color: #c84b31;
-    border-radius: 1.04vw;
-    border-style: none;
-    display:flex;
-    flex-direction: row;
-    justify-content: space-around;
-    color: #161616;   
-    font-weight: bold;
+
+.categoria:hover {
+  background: #161616;
+  color: #c84b31;
+  border-radius: 1.04vw;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
 }
-.categoria{
-    color: #161616;
-    font-size: 3.13vw;
-    text-decoration: none;
+
+@media screen and (max-width: 768px) {
+  .categoria {
+    font-size: 5.13vw;
+  }
 }
-.categoria:hover{
-    width: 7.30vw;
-    height: 3.13vw;
-    color: #c84b31;
+
+body {
+  background: #161616;
+  width: 90%;
+  margin: 2.60vw auto;
+  color: #ecdbba;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  gap: 1.04vw;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "logo" "header" "parrafo" "servicios1" "contactoCliente" "footer";
+}
+
+h2 {
+  color: #c84b31;
+  font-size: 4.17vw;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    -webkit-transition: all 2s ease;
     transition: all 2s ease;
-}
-.inicio:hover{
-    width: 8.30vw;
-    height: 3.13vw;
-    color: #c84b31;
-    background-color: #161616;
-    transition: all 2s ease;
-}
-.servicios:hover{
-    width: 14.00vw;
-    height: 3.13vw;
-    color: #c84b31;
-    background-color: #161616;
-    transition: all 2s ease;
-}
-.contacto:hover{
-    width: 13.70vw;
-    height: 3.13vw;
-    color: #c84b31;
-    background-color: #161616;
-    transition: all 2s ease;
-}
-
-.parrafo{
-    padding: 1.67vw;
-    border-radius: 1.04vw;
-    border-color: #c84b31;
-    border-style: solid;
-    grid-area: parrafo;
+    display: -ms-grid;
     display: grid;
-    grid-template-areas:
-    "fotoInicio par par par";
-    
-}
-h2{
-    color: #c84b31;
-    font-size: 3.13vw;
-    text-align: center;
-}
-p{
-    text-align: justify;
-    padding: 1.67vw;
-}
-.par{
-    grid-area: par;
-}
-.fondoFotos{
-    max-width: 33.31vw;
-}
-.fotoInicio{
-    grid-area: fotoInicio;
-    align-self: center;
-    justify-self: center;
-    transition: all 3s ease;
-}
-.fotoInicio:hover{
-    transform: scale(1.2, 1.2);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+        grid-template-areas: "logo" "header" "parrafo" "servicios1" "contactoCliente" "footer";
+  }
+  h2 {
+    font-size: 30px;
+  }
 }
 
-
-
-.servicios1{
-    padding: 2.60vw;
-    margin-bottom: 1.04vw;
-    border-radius: 1.04vw;
-    border-color:#c84b31 ;
-    border-style: solid;
-    text-align: center;
-    grid-area: servicios1;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr,1fr);  
-    grid-template-columns: repeat(1, 1pr); 
-    grid-template-areas:
-    "servicios3" 
-    "fotoInicio"
-    "descripcionempresa"
-    "listadeprecios";
-}
-#servicios3{
-    grid-area: servicios3;
-}
-#descripcionEmpresa{
-    grid-area: descripcionempresa;
-}
-.listaDePrecios{
-    grid-area: listadeprecios;
+footer {
+  padding: 1rem;
+  border-radius: 1.04vw;
+  border-color: #c84b31;
+  border-style: solid;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[1];
+      grid-template-rows: repeat(1, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: "direccion empty redesSociales redesSociales";
 }
 
-
-
-
-
-.contactoCliente{
-    padding: 2.60vw;
-    margin-bottom: 1.04vw;
-    border-radius: 1.04vw;
-    border-color:#c84b31 ;
-    border-style: solid;
-    text-align: center;
-    
-    grid-area: contactoCliente;
-    display: grid;
-    grid-template-rows: repeat(2, 1fr,1fr);  
-    grid-template-columns: repeat(1, 1pr); 
-    grid-template-areas:
-    "dejaucontacto" 
-    "formulario1";
-}
-.dejaTucontacto{
-    grid-area: dejatucontacto;
-}
-.formulario1{
-    grid-area: formulario1;
+.direccion {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: direccion;
 }
 
+.redesSociales {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 2;
+  grid-area: redesSociales;
+}
 
+.redes {
+  max-width: 7.43vw;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+}
 
+.redes:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
 
-
-footer{
-    padding: 1rem;
-    border-radius: 1.04vw;
-    border-color: #c84b31;
-    border-style: solid;
+@media screen and (max-width: 768px) {
+  footer {
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
     grid-area: footer;
+    display: -ms-grid;
     display: grid;
-    grid-template-rows: repeat(1, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-areas:
-    "direccion empty redesSociales redesSociales";
-
-}
-.direccion{
-    grid-area: direccion;
-}
-.redesSociales{
-    align-self: center;
-    justify-self: end;
-    grid-area: redesSociales;
-}
-.redes{
-    max-width: 7.43vw;
-    transition: all 2s ease
-}
-.redes:hover{
-    transform: rotate(360deg)
-}
-
-
-
-
-
-
-
-@media screen and (max-width: 768px){
-    body{ display: grid;
-        gap: 1.04vw;
-        justify-content: center; 
-        grid-template-areas:
-        "logo"
-        "header"
-        "parrafo"
-        "servicios1"
-        "contactoCliente"
-        "footer";
-    }
-    .categoria{
-        font-size: 5.13vw; 
-    }
-
-
-@media screen and (max-width: 768px){
-    .parrafo{
-        grid-area: parrafo;
-        display: grid;
-        grid-template-rows: repeat(2, 1fr,1fr);  
-        grid-template-columns: repeat(1, 1pr); 
-        grid-template-areas:
-        "fotoInicio" 
-        "par";
-    }
-    h2{
-        color: #c84b31;
-        font-size: 5.13vw;
-        text-align: center;
-        margin-bottom: 3.13vw;
-    }
-}
-
-@media screen and (max-width: 768px){
-    footer{
-        grid-area: footer;
-        display: grid;
+    -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
+    -ms-grid-rows: (1fr)[2];
         grid-template-rows: repeat(2, 1fr);
-        grid-template-areas:
-        "direccion"
-        "redesSociales";    
-    }
-    .redesSociales{
+        grid-template-areas: "direccion" "redesSociales";
+  }
+  .redesSociales {
+    -ms-grid-column-align: center;
         justify-self: center;
-    }
-    .redes{
-        max-width: 13.43vw;
-        transition: all 2s ease
-    }
-    .redes:hover{
-        transform: rotate(360deg)
-    }
+  }
+  .redes {
+    max-width: 13.43vw;
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+  .redes:hover {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
+.fotoLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2.60vw;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo;
+  max-width: 60vw;
+}
+
+.fondoFotos {
+  max-width: 33.31vw;
+}
+
+.fotoInicio {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: fotoInicio;
+  -ms-flex-item-align: center;
+      align-self: center;
+      justify-self: center;
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease;
+}
+
+.fotoInicio:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.parrafo {
+  padding: 1.67vw;
+  border-radius: 1.04vw;
+  border-color: #c84b31;
+  border-style: solid;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: parrafo;
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "fotoInicio par";
+}
+
+.par {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: par;
+}
+
+p {
+  text-align: justify;
+  padding: 1.67vw;
+}
+
+.servicios1 {
+  padding: 2.60vw;
+  border-radius: 1.04vw;
+  border-style: solid;
+  text-align: center;
+  border-color: #c84b31;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr, 1fr)[2];
+      grid-template-rows: repeat(2, 1fr, 1fr);
+  -ms-grid-columns: (1pr)[1];
+      grid-template-columns: repeat(1, 1pr);
+      grid-template-areas: "servicios3"  "fotoInicio" "descripcionempresa" "listadeprecios";
+}
+
+#servicios3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: servicios3;
+}
+
+#descripcionEmpresa {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: descripcionempresa;
+}
+
+.listaDePrecios {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: listadeprecios;
+}
+
+.listaDePrecios .tabla h2 {
+  font-size: 2vw;
+}
+
+@media screen and (max-width: 768px) {
+  .servicios1 {
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+  }
+}
+
+.contactoCliente {
+  padding: 1.67vw;
+  border-radius: 1.04vw;
+  border-color: #c84b31;
+  border-style: solid;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr, 1fr)[2];
+      grid-template-rows: repeat(2, 1fr, 1fr);
+  -ms-grid-columns: (1pr)[1];
+      grid-template-columns: repeat(1, 1pr);
+      grid-template-areas: "dejaucontacto"  "formulario1";
+}
+
+.dejaTucontacto {
+  grid-area: dejatucontacto;
+}
+
+.formulario1 {
+  background-color: #c84b31;
+  border-radius: 1.04vw;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: formulario1;
+  width: 35.83vw;
+  margin: auto;
+  padding: 1.04vw;
+  -webkit-box-shadow: 0.73vw 1.35vw 3.86vw #000;
+          box-shadow: 0.73vw 1.35vw 3.86vw #000;
+  -webkit-transition: all 2s ease;
+  transition: all 2s ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.formulario1 label {
+  padding: 1.04vw;
+}
+
+.formulario1 input {
+  -webkit-box-shadow: 2px 1px 8px #000;
+          box-shadow: 2px 1px 8px #000;
+  padding: 1.56vw;
+  text-align: center;
+  font-weight: bold;
+}
+
+.formulario1 div {
+  padding: 1.04vw;
+}
+
+.formulario1 .terminos {
+  color: blue;
+  font-weight: bold;
+}
+
+.formulario1 .submit input:hover {
+  color: #c84b31;
+  background-color: #161616;
+}
+
+@media screen and (max-width: 768px) {
+  .formulario1 {
+    width: 60vw;
+    font-size: 4.0vw;
+  }
+  .formulario1 label {
+    padding: 2.04vw;
+  }
+  .formulario1 input {
+    padding: 2.56vw;
+  }
+  .formulario1 div {
+    padding: 2.04vw;
+  }
+  .formulario1 .terminos {
+    padding: 5vw;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=style.css.map */

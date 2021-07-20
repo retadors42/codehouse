@@ -1,0 +1,19 @@
+.parrafo{
+    padding: $wPadding ;
+    border-radius: $borderRd ;
+    border-color: $borderColor ;
+    border-style: solid;
+    grid-area: parrafo;
+    display: grid;
+    grid-template-areas:
+    "fotoInicio par";
+    
+}
+.par{
+    grid-area: par;
+}
+
+p{
+    text-align: justify;
+    padding: $wPadding ;
+}

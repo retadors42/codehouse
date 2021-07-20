@@ -1,0 +1,31 @@
+header{
+    grid-area: header;
+    padding: 2.60vw;
+    background-color: $colorMenu ;
+    border-radius: $borderRd;
+}
+.menu{
+    background-color: $colorMenu;
+    border-style: none;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    font-weight: bold;
+}
+.categoria{
+    color: $colorLetraMenu;
+    font-size: $sizeLetMenu;
+    text-decoration: none;
+}
+.categoria:hover{
+ 
+    background: $bgColor;
+    color: $colorLetraMenuHover;
+    border-radius: $borderRd;
+    transition: all 2s ease;
+}
+@media screen and (max-width: 768px){
+    .categoria{
+        font-size: 5.13vw; 
+    }
+}

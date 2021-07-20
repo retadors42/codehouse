@@ -1,0 +1,73 @@
+.contactoCliente{
+    padding: $wPadding ;
+    border-radius: $borderRd ;
+    border-color: $borderColor ;
+    border-style: solid;
+    text-align: center;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr,1fr);  
+    grid-template-columns: repeat(1, 1pr); 
+    grid-template-areas:
+    "dejaucontacto" 
+    "formulario1";
+}
+.dejaTucontacto{
+    grid-area: dejatucontacto;
+}
+.formulario1{
+    background-color: $naranjaColor ;
+    border-radius: $borderRd ;
+    grid-area: formulario1;
+    width: 35.83vw;
+    margin: auto;
+    padding: 1.04vw;
+    box-shadow: 0.73vw 1.35vw 3.86vw #000;
+    
+    transition: all 2s ease;
+    display: flex;
+    flex-direction: column;
+    
+        label{
+            
+            padding: 1.04vw;
+        }
+        input{
+            box-shadow: 2px 1px 8px #000;
+            padding: 1.56vw;
+            text-align: center;
+            font-weight: bold;
+        }
+        div{
+            padding: 1.04vw;
+        }
+        .terminos{
+            color: blue ;
+            font-weight: bold;
+        }
+        .submit{                
+            input:hover{
+                color: $naranjaColor ;
+                background-color: $grisColor ;
+        }
+    }
+}
+@media screen and (max-width: 768px){
+    .formulario1{
+        width: 60vw;
+        font-size: 4.0vw;
+
+        label{     
+            padding: 2.04vw;
+        }
+        input{
+            padding: 2.56vw;
+           
+        }
+        div{
+            padding: 2.04vw;
+        }
+        .terminos{
+            padding: 5vw;
+        }
+    }
+}

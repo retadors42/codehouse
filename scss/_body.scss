@@ -1,0 +1,44 @@
+body{
+    background: $bgColor;
+    width: 90%;
+    margin: 2.60vw auto;
+    color: $textColor;
+    font-size: $sizeLet ; 
+    font-family: $font;
+    gap: 1.04vw;
+    transition: all 2s ease;
+    display: grid;
+    grid-template-areas:
+    "logo"
+    "header"
+    "parrafo"
+    "servicios1"
+    "contactoCliente"
+    "footer";
+    
+}
+
+h2{
+    color: $subColor ;
+    font-size: $subSize ;
+    text-align: center;
+}
+@media screen and (max-width: 768px){
+    body{ 
+        
+        transition: all 2s ease;
+        display: grid;
+        justify-content: center; 
+        grid-template-areas:
+        "logo"
+        "header"
+        "parrafo"
+        "servicios1"
+        "contactoCliente"
+        "footer";
+        
+    }
+    h2{
+        font-size: 30px;
+    }
+}

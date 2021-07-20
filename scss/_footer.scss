@@ -1,0 +1,50 @@
+footer{
+    padding: 1rem;
+    border-radius: $borderRd ;
+    border-color: $borderColor ;
+    border-style: solid;
+    display: grid;
+    grid-template-rows: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "direccion empty redesSociales redesSociales";
+
+}
+.direccion{
+    grid-area: direccion;
+}
+.redesSociales{
+    align-self: center;
+    justify-self: end;
+    grid-area: redesSociales;
+}
+.redes{
+    max-width: 7.43vw;
+    transition: all 2s ease
+}
+.redes:hover{
+    transform: rotate(360deg)
+}
+
+
+@media screen and (max-width: 768px){
+    footer{
+        grid-area: footer;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas:
+        "direccion"
+        "redesSociales";    
+    }
+    .redesSociales{
+        justify-self: center;
+    }
+    .redes{
+        max-width: 13.43vw;
+        transition: all 2s ease
+    }
+    .redes:hover{
+        transform: rotate(360deg)
+    }
+}
