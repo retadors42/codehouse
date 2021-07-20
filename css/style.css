@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color: #ecdbba;
+    background-color: #161616;
+       
+    font-family: 'Poppins', sans-serif;
+   
+}
+
+header{
+    margin:25px ;
+    padding: 25px;
+    background-color: #c84b31 ;
+    color: #ecdbba;
+    border-radius: 10px;
+    text-align: center;
+
+
+}
+.fotoLogo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto; 
+    padding: 1rem;  
+}
+ul{
+    list-style: none;
+
+}
+li{
+    display: inline-block;
+    width: 30%;
+    position: relative;
+    
+}
+ul li a:hover{
+    background-color: #161616;
+    color: #c84b31;
+    padding: 5px;
+}
+a{
+    text-decoration: none;
+    padding: 5px;
+}
+
+.menu{
+    background-color: #c84b31;
+    color: #161616;
+}
+
+.subtitulos {
+    color: #161616;
+    font-size: 2.5em;
+}
+.subtitulos2{
+
+    color: #c84b31;
+    font-size: 1.5em;
+
+}
+
+.FondoFotos{
+    background-color:#201eb6;
+    text-align: right;
+    margin: 20px;
+    margin-bottom: 10px;   
+}
+  
+h2{
+    color: #c84b31;
+    font-size: 2em;
+    
+    
+
+}
+p{
+
+}
+.formulario1{
+
+}
+.parrafo2{
+    margin:25px ;
+    padding: 25px;
+    color: #ecdbba;
+    border-radius: 10px;
+    border-color:#c84b31 ;
+    border-style: solid;
+  
+    
+    
+    
+}
+.viñetas {
+    color:#e7dfdd;
+}
+
+footer{
+    margin:25px ;
+    padding: 80px;
+    background-color: #c84b31 ;
+    color: #161616;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+.servicios1{
+    margin:25px ;
+    padding: 25px;
+    color: #ecdbba;
+    border-radius: 10px;
+    border-color:#c84b31 ;
+    border-style: solid;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.contactoCliente{
+    margin:25px ;
+    padding: 25px;
+    color: #ecdbba;
+    border-radius: 10px;
+    border-color:#c84b31 ;
+    border-style: solid; 
+}
+.listaDePrecios{
+    text-align: center;
+    margin:25px ;
+    padding: 25px;
+    color: #ecdbba;
+    border-radius: 10px;
+    border-color:#c84b31 ;
+    border-style: solid; 
+}
+.direccion{
+    float: left;
+
+
+}
+.redes{
+    float: right;
+}
